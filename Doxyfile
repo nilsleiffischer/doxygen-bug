@@ -1,0 +1,27 @@
+
+PROJECT_NAME           = Test page order
+
+# The PageIndex.dox file defines the order of the pages. This works with
+# Doxygen 1.9.1, but doesn't with 1.9.2. 
+INPUT = docs/PageIndex.dox docs
+# Here are some variations that work with Doxygen 1.9.2, but this is very
+# fragile: _All_ files must be listed explicitly, and the ordering breaks as
+# soon as a directory appears, which is unavoidable when adding source code.
+# INPUT = docs/PageIndex.dox docs/PageA.md docs/PageB.md        # works
+# INPUT = docs/PageB.md docs/PageA.md                           # works
+# INPUT = docs/PageB.md docs/PageA.md docs                      # breaks
+
+FILE_PATTERNS          = *.hpp \
+                         *.md
+
+GENERATE_HTML          = YES
+
+GENERATE_LATEX         = NO
+
+GENERATE_RTF           = NO
+
+GENERATE_XML           = NO
+
+OUTPUT_DIRECTORY       = docs
+
+GENERATE_TREEVIEW      = YES

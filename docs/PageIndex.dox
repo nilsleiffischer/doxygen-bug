@@ -1,0 +1,11 @@
+/*!
+
+\cond
+List the pages in the order they should appear. This works with Doxygen 1.9.1,
+but doesn't with 1.9.2.
+\endcond
+
+\page page_b
+\page page_a
+
+*/
